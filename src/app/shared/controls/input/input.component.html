@@ -1,0 +1,14 @@
+<div class="relative flex items-center">
+    <mat-icon class="" [class.w-0]="icon === ''">{{ icon }}</mat-icon>
+    <input
+        [ngClass]="style"
+        [class.px-10]="icon !== ''"
+        [attr.type]="type"
+        [value]="value"
+        (keyup)="onKeyUp($any($event).target.value)"
+        class="app-input"
+        (blur)="onBlur()"
+        [disabled]="isDisabled"
+        [placeholder]="placeholder"
+    />
+</div>

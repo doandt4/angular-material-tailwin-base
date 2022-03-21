@@ -1,0 +1,20 @@
+
+
+
+<mat-toolbar class="bg-green-500 flex flex-col self-center justify-center">
+        <span class="material-icons text-8xl text-white">check_circle_outline</span>
+</mat-toolbar>
+
+<div class="px-10 py-4 flex flex-col">
+    <h3 class="text-center heading-3">Register successfully !</h3>
+    <span>This action requires email verification. Please check your inbox and verify with code </span>
+    <form *ngIf="verifyForm" [formGroup]="verifyForm" class="flex flex-col" (ngSubmit)="onSubmit()">
+        <canion3d-form-field  [required]="true" [control]="verifyForm.controls.code">
+            <canion3d-input [type]="'text'" formControlName="code" [placeholder]="'Code'"></canion3d-input>
+        </canion3d-form-field>
+
+        <button mat-flat-button  class="save-button bg-green-500 self-center text-white" aria-label="SAVE">
+            Submit
+        </button>
+    </form>
+</div>  

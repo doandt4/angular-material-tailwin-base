@@ -1,0 +1,81 @@
+image: node:16-alpine
+
+variables:
+  AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+  AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+  AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+
+  ENVIRONMENT_NAME: DEV
+  S3_BUCKET: canion3d-frontend-dev
+  CDN_DISTRIBUTION_ID: ""
+
+stages:
+  - install
+  - build
+  - publish_dev
+  - publish_uat
+  - publish_prod
+
+install:
+  stage: install
+  script:
+    - npm install --legacy-peer-deps
+  cache:
+    key:
+      files:
+        - package-lock.json
+    paths:
+      - node_modules
+
+build:
+  stage: build
+  image: trion/ng-cli
+  before_script:
+    - npm ci --legacy-peer-deps
+  script:
+    - ng build
+  artifacts:
+    expire_in: 1 day
+    paths:
+      - $CI_PROJECT_DIR/dist
+  cache:
+    key:
+      files:
+        - package-lock.json
+    paths:
+      - node_modules
+    policy: pull
+
+# Deployment steps
+publish_dev:
+  stage: publish_dev
+  only:
+    - dev
+  image:
+    name: amazon/aws-cli
+    entrypoint: [""]
+  script:
+    - aws s3 cp $CI_PROJECT_DIR/dist/** s3://$S3_BUCKET_DEV --recursive --acl public-read
+    - aws cloudfront create-invalidation --distribution-id $CDN_DISTRIBUTION_ID_DEV --paths "/*"
+
+publish_uat:
+  stage: publish_uat
+  only:
+    - uat
+  image:
+    name: amazon/aws-cli
+    entrypoint: [""]
+  script:
+    - aws s3 cp $CI_PROJECT_DIR/dist/** s3://$S3_BUCKET_UAT --recursive --acl public-read
+    - aws cloudfront create-invalidation --distribution-id $CDN_DISTRIBUTION_ID_UAT --paths "/*"
+
+publish_prod:
+  stage: publish_prod
+  only:
+    - master
+  image:
+    name: amazon/aws-cli
+    entrypoint: [""]
+  script:
+    - aws s3 cp $CI_PROJECT_DIR/dist/** s3://$S3_BUCKET_PROD --recursive --acl public-read
+    - aws cloudfront create-invalidation --distribution-id $CDN_DISTRIBUTION_ID_PROD --paths "/*"

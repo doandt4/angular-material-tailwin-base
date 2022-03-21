@@ -1,0 +1,74 @@
+<div class="h-screen">
+    <div class="login-form flex flex-row ">
+        <div id="login-image" class="invisible w-0 flex content-center justify-center flex-wrap gap-36 xl:p-24 xl:w-1/2 xl:visible xl:relative">
+            <div class="flex justify-center gap-20">
+                <span class="background-image h-80 grid grid-cols-1 w-80 rounded-3xl relative">
+                    <div class="justify-self-center absolute top-12">
+                        <img src="assets/images/IaaS.png" alt="" class="transform scale-100 ">
+                    </div>
+                    <div class="justify-self-center absolute top-52 mt-3">
+                        <span class="mt-8 subtitle-large">Infrastruture-as-a-Service (IaaS)</span>
+                    </div>
+                </span>
+                <span class="background-image h-80 grid grid-cols-1 w-80 rounded-3xl relative">
+                    <div class="justify-self-center absolute top-16">
+                        <img src="assets/images/SaaS.png" alt="" class="transform scale-100 ">
+                    </div>
+                    <div class="justify-self-center absolute top-52 mt-3">
+                        <span class="mt-8 subtitle-large">Software-as-a- Service (SaaS)</span>
+                    </div>
+                </span>
+            </div>
+            <div class="flex justify-center gap-20">
+                <span class="background-image h-80 grid grid-cols-1 w-80 rounded-3xl relative">
+                    <div class="justify-self-center absolute top-24">
+                        <img src="assets/images/STaaS.png" alt="" class="transform scale-100 ">
+                    </div>
+                    <div class="justify-self-center absolute top-44 mt-16">
+                        <span class="mt-8 subtitle-large">Storage-as-a-Service (STaaS)</span>
+                    </div>
+                </span>
+                <span class="background-image h-80 grid grid-cols-1 w-80 rounded-3xl relative">
+                    <div class="justify-self-center absolute top-20">
+                        <img src="assets/images/PaaS.png" alt="" class="transform scale-100 ">
+                    </div>
+                    <div class="justify-self-center absolute top-44 mt-16">
+                        <span class="mt-8 subtitle-large">Platform-as-a-Service (PaaS)</span>
+                    </div>
+                </span>
+            </div>
+            <div
+                class="flex justify-center gap-20 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                <span class="bg-white h-72 w-72 grid grid-cols-1 shadow-2xl rounded-3xl relative">
+                    <div class="justify-self-center absolute top-9">
+                        <span class="mt-8 heading-5">3D Print-as-a- Service
+                            (3DPaaS)</span>
+                    </div>
+                    <div class="justify-self-center absolute top-24">
+                        <img src="assets/images/3DPaaS.png" alt="" class="transform scale-90 ">
+                    </div>
+                    <div class="justify-self-center absolute top-64">
+                        <span class="mt-8 heading-5">Cloud platform</span>
+                    </div>
+                </span>
+            </div>
+        </div>
+        <div class="w-full relative xl:w-1/2">
+            <div class="flex flex-col w-full py-3 xl:py-14">
+                <div class="self-center mb-10">
+                    <img src="assets/images/logo.png" alt="" srcset="" class="transform scale-150 ">
+                </div>
+                <div class="w-3/4 self-center">
+                    <mat-tab-group class="remove-border-bottom">
+                        <mat-tab label="Login" class="heading-4">
+                            <canion3d-login-form></canion3d-login-form>
+                        </mat-tab>
+                        <mat-tab label="Register">
+                            <canion3d-register-form></canion3d-register-form>
+                        </mat-tab>
+                    </mat-tab-group>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

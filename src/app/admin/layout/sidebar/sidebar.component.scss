@@ -1,0 +1,28 @@
+.mat-list-base .mat-list-option {
+    color: rgba(196, 196, 196, 1);
+    &.router-link-active {
+        color: rgba(255, 161, 20, 1);
+    }
+}
+::ng-deep .sidebar-container {
+    .mat-list-base .mat-list-option .mat-list-text {
+        background: linear-gradient(#212429 0 0) padding-box,
+            /*this is your grey background*/
+                linear-gradient(to right, #212429, #212429) border-box;
+        padding: 10px;
+        border: 1px solid transparent;
+        border-radius: 10px;
+        display: inline-block;
+        margin: 75px 0;
+    }
+    .mat-list-base .mat-list-option.router-link-active .mat-list-text {
+        background: linear-gradient(#212429 0 0) padding-box,
+            /*this is your grey background*/
+                linear-gradient(to right, #ffa114, #f5350b) border-box;
+        padding: 10px;
+        border: 1px solid transparent;
+        border-radius: 10px;
+        display: inline-block;
+        margin: 75px 0;
+    }
+}

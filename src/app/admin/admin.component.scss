@@ -1,0 +1,21 @@
+.mat-list-text{
+    padding-right: 0 !important;
+}
+
+.app-input {
+    height: 48px;
+    line-height: 18px;
+    padding: 0 15px;
+    outline: none;
+    background-color: red;
+
+    // &:focus {
+    //     border: 1px solid $primary-pat('500');
+    // }
+
+    &:disabled {
+        background: var(--neutral-200);
+        border: 1px solid var(--neutral-400);
+        color: var(--neutral-400);
+    }
+}

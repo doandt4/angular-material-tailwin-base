@@ -1,0 +1,22 @@
+.mat-tab-label-content{
+    @include heading-4;
+    color: var(--primary-400);
+}
+
+.mat-tab-label-active{
+    opacity: 1 !important;
+}
+
+.mat-tab-header {
+    border-bottom: none;
+}
+
+.remove-border-bottom .mat-tab-header {
+    border-bottom: none;
+}
+
+.mat-expansion-panel-header {
+    .mat-expansion-indicator::after {
+        color: red !important;
+    }
+}

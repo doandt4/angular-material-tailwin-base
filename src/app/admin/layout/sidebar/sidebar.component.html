@@ -1,0 +1,109 @@
+<div
+    class="sidebar-container flex flex-col gap-2 xl:flex xl:flex-col xl:gap-7 xl:py-5"
+>
+    <div class="self-center cursor-pointer">
+        <img
+            src="assets/images/logo_4.png"
+            alt=""
+            srcset=""
+            class="transform scale-50 lg:scale-75 xl:scale-110"
+        />
+        <img
+            src="assets/images/logo_5.png"
+            alt=""
+            srcset=""
+            class="transform scale-50 lg:scale-75 xl:scale-110"
+        />
+    </div>
+
+    <mat-selection-list [multiple]="false" class="flex flex-col xl:gap-4">
+        <mat-list-option
+            class="xl:px-3"
+            [routerLink]="['/admin/home']"
+            routerLinkActive="router-link-active"
+        >
+            <div
+                class="pl-4 self-center flex flex-row xl:gap-5 xl:self-start xl:flex xl:flex-row"
+            >
+                <div>
+                    <mat-icon class="xl:text-3xl xl:w-1/4">home</mat-icon>
+                </div>
+                <div class="invisible w-0 self-center xl:visible xl:w-3/4">
+                    <span>HOME</span>
+                </div>
+            </div>
+        </mat-list-option>
+
+        <mat-list-option
+            class="xl:px-3"
+            [routerLink]="['/admin/order-history']"
+            routerLinkActive="router-link-active"
+        >
+            <div
+                class="pl-4 self-center flex flex-row xl:gap-5 xl:self-start xl:flex xl:flex-row"
+            >
+                <div>
+                    <mat-icon class="xl:text-3xl xl:w-1/4">history</mat-icon>
+                </div>
+                <div class="invisible w-0 self-center xl:visible xl:w-3/4">
+                    <span>ORDER HISTORY</span>
+                </div>
+            </div>
+        </mat-list-option>
+
+        <mat-list-option
+            class="xl:px-3"
+            [routerLink]="['/admin/statistics']"
+            routerLinkActive="router-link-active"
+        >
+            <div
+                class="pl-4 self-center flex flex-row xl:gap-5 xl:self-start xl:flex xl:flex-row"
+            >
+                <div>
+                    <mat-icon class="xl:text-3xl xl:w-1/4"
+                        >trending_up</mat-icon
+                    >
+                </div>
+                <div class="invisible w-0 self-center xl:visible xl:w-3/4">
+                    <span>STATISTICS</span>
+                </div>
+            </div>
+        </mat-list-option>
+
+        <mat-list-option
+            class="xl:px-3"
+            [routerLink]="['/admin/products']"
+            routerLinkActive="router-link-active"
+        >
+            <div
+                class="pl-4 self-center flex flex-row xl:gap-5 xl:self-start xl:flex xl:flex-row"
+            >
+                <div>
+                    <mat-icon class="xl:text-3xl xl:w-1/4"
+                        >restaurant_menu</mat-icon
+                    >
+                </div>
+                <div class="invisible w-0 self-center xl:visible xl:w-3/4">
+                    <span>PRODUCTS</span>
+                </div>
+            </div>
+        </mat-list-option>
+
+        <mat-list-option
+            class="xl:px-3"
+            [routerLink]="['/admin/settings']"
+            routerLinkActive="router-link-active"
+        >
+            <div
+                class="pl-4 self-center flex flex-row xl:gap-5 xl:self-start xl:flex xl:flex-row"
+            >
+                <div>
+                    <mat-icon class="xl:text-3xl xl:w-1/4">settings</mat-icon>
+                </div>
+                <div class="invisible w-0 self-center xl:visible xl:w-3/4">
+                    <span>SETTINGS</span>
+                </div>
+            </div>
+        </mat-list-option>
+    </mat-selection-list>
+</div>

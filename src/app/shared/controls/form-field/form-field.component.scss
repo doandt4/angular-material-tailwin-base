@@ -1,0 +1,45 @@
+
+
+.form-field {
+
+    &__label {
+        display: block;
+    }
+
+    &__control {
+        display: block;
+    }
+
+    &__error {
+        opacity: 1;
+        font-size: 12px;
+        color: var(--red-500);
+        //padding: 4px 0;
+        //min-height: 22px;
+
+        span {
+            display: block;
+        }
+    }
+
+    &_req{
+        color: var(--red-500);
+    }
+
+    &_error {
+        .form-field__error {
+            animation: slowDisplay 0.5s 0.5;
+        }
+    }
+    
+}
+
+@keyframes slowDisplay {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}

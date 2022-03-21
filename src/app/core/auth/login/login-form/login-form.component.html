@@ -1,0 +1,31 @@
+<div class="flex flex-col">
+    <form action="" (ngSubmit)="onSubmit()" *ngIf="loginForm" [formGroup]="loginForm" class="mt-6 px-4 flex flex-col gap-3">
+
+        <canion3d-form-field [label]="'Account'" [required]="true" [control]="loginForm.controls.email" [regexMessage]="regexErrors.email" >
+            <canion3d-input [style]="['bg-neutral-200', 'rounded-xl']" [icon]="'person'" [type]="'text'" formControlName="email" [placeholder]="'Account'"></canion3d-input>
+        </canion3d-form-field>
+    
+        <canion3d-form-field [label]="'Password'" [required]="true" [control]="loginForm.controls.password" >
+            <canion3d-input [style]="['bg-neutral-200', 'rounded-xl']" [icon]="'lock'" [type]="'password'" formControlName="password" [placeholder]="'Password'"></canion3d-input>
+        </canion3d-form-field>    
+    
+        <div class="mb-10">
+            <span class="cursor-pointer heading-5 text-primary-400" (click)="onForgotPassword()">Forgot Password</span>
+        </div>
+            
+        <button mat-flat-button  class="w-full body py-4 rounded-xl bg-primary-400 text-white heading-5">Login</button>
+        
+    </form>
+    
+    <div class="w-full text-center justify-center align-middle  flex flex-row mt-10 heading-4 " (click)="onExternalLogin()">
+        <mat-icon class="text-blue-600 mr-2">public</mat-icon>
+        <span class="self-center cursor-pointer underline text-blue-600 heading-5">Log in with Social Account</span>
+    </div>   
+    
+
+    <div class="flex flex-row w-full gap-10 text-center justify-center align-middle mt-6 xl:mt-28">
+        <a (click)="openPolicy()"  class="heading-5 text-primary-400 underline">Cookie Policy - Terms & Conditions</a>
+    </div>
+</div>
+
+

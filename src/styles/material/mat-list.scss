@@ -1,0 +1,13 @@
+.mat-list-text{
+    padding-right: 0 !important;
+}
+
+.mat-list-base .mat-list-item .mat-list-item-content-reverse, .mat-list-base .mat-list-option .mat-list-item-content-reverse{
+    padding-left: 0 !important;
+}
+
+.list-status-message.mat-list-base .mat-list-item{
+    height: auto !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

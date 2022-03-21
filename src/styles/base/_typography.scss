@@ -1,0 +1,67 @@
+@import 'font';
+
+@mixin heading-1 {
+    font-family: $base-font-family !important;
+    font-size: 36px !important;    
+    line-height: 48px !important;
+    font-weight: 700 !important;
+} 
+
+@mixin heading-2 {
+    font-family: $base-font-family !important;
+    font-size: 28px !important;
+    line-height: 32px !important;
+    font-weight: 700 !important;
+    
+}
+
+@mixin heading-3 {
+    font-family: $base-font-family !important;
+    font-size: 24px !important;    
+    line-height: 28px !important;
+    font-weight: 700 !important;
+}
+
+@mixin heading-4 { 
+    font-family: $base-font-family !important;
+    font-size: 20px !important;
+    line-height: 24px !important;
+    font-weight: 700 !important;
+}
+
+@mixin  heading-5 {
+    font-family: $base-font-family !important;
+    font-size: 16px !important;
+    line-height: 20px !important;
+    font-weight: 700 !important;
+}
+
+@mixin subtitle-large { 
+    font-family: $base-font-family;
+    font-size: 14px !important;
+    line-height: 16px !important;
+    font-weight: 500 !important;
+}
+
+@mixin subtitle-small { 
+    font-family: $base-font-family !important;
+    font-size: 12px !important;
+    line-height: 16px !important;
+    font-weight: 500 !important;
+}
+
+@mixin subtitle-tiny { 
+    font-family: $base-font-family !important;
+    font-size: 10px !important;
+    line-height: 12px !important;
+    font-weight: 500 !important;
+}
+
+@mixin body {
+    font-family: $base-font-family !important;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    font-weight: 400 !important;
+}
+
+    

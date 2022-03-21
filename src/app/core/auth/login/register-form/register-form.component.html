@@ -1,0 +1,48 @@
+
+    <form action="" (ngSubmit)="onSubmitForm()" *ngIf="registerForm" [formGroup]="registerForm" class="mt-6 flex flex-col px-4">
+        
+        <div class="flex flex-col gap-3">
+            <div class="flex flex-row gap-5">
+                <canion3d-form-field class="w-1/2" [label]="'First name'" [required]="true" [control]="registerForm.controls.firstName" >
+                    <canion3d-input [style]="['bg-neutral-200', 'rounded-xl']" [type]="'text'" formControlName="firstName" [placeholder]="'First name'"></canion3d-input>
+                </canion3d-form-field>
+            
+                <canion3d-form-field class="w-1/2" [label]="'Last name'" [required]="true" [control]="registerForm.controls.lastName" >
+                    <canion3d-input [style]="['bg-neutral-200', 'rounded-xl']" [type]="'text'" formControlName="lastName" [placeholder]="'Last name'"></canion3d-input>
+                </canion3d-form-field>  
+            </div>
+            
+            <canion3d-form-field [label]="'Email address'" [required]="true" [control]="registerForm.controls.email" [regexMessage]="regexErrors.email" >
+                <canion3d-input [style]="['bg-neutral-200', 'rounded-xl']" [type]="'text'" formControlName="email" [placeholder]="'Email address'"></canion3d-input>
+            </canion3d-form-field>
+    
+            <canion3d-form-field [label]="'Password'" [required]="true" [control]="registerForm.controls.password" [regexMessage]="regexErrors.password" >
+                <canion3d-input [style]="['bg-neutral-200', 'rounded-xl']" [type]="'password'" formControlName="password" [placeholder]="'Password'"></canion3d-input>
+            </canion3d-form-field> 
+    
+            <canion3d-form-field [label]="'Confirm password'" [required]="true" [control]="registerForm.controls.confirmPassword" >
+                <canion3d-input [style]="['bg-neutral-200', 'rounded-xl']" [type]="'password'" formControlName="confirmPassword" [placeholder]="'Confirm password'"></canion3d-input>
+            </canion3d-form-field> 
+    
+            <canion3d-form-field [required]="true" [control]="registerForm.controls.isAgreePolicy">
+                <canion3d-checkbox formControlName="isAgreePolicy"  [items]="''">
+                    <span class="ml-2 body">I agree to <span class="underline text-blue-600 cursor-pointer" (click)="OpenTermCondition()">Terms & Conditions of Service </span><span class="text-red-600">*</span></span>
+                </canion3d-checkbox>
+            </canion3d-form-field>
+        </div>
+
+        <div>
+            <mat-checkbox formControlName="isGetPrinter" class="example-margin body" color="primary">I have 3D printer</mat-checkbox>            
+        </div>   
+
+        <div>
+            <mat-checkbox formControlName="isReceivePromotionEmail" class="example-margin body" color="primary">Receive promotional emails related to Canion3D products & services? </mat-checkbox>            
+        </div>      
+    
+        <button type="submit" mat-flat-button color="primary" class="w-full body py-4 rounded-xl mt-7">Register</button>      
+        
+    </form>
+
+    
+
+

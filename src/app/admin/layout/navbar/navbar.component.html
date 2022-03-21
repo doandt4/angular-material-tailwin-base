@@ -1,0 +1,33 @@
+<div class="flex justify-between bg-black px-8 py-4">
+    <canion3d-input
+        [style]="['rounded-2xl', 'bg-primary-grey', 'h-10']"
+        class="self-center w-1/4 shadow-lg rounded-2xl mr-10"
+        [icon]="'search'"
+        [type]="'text'"
+        [placeholder]="'Search, ...'"
+    >
+    </canion3d-input>
+
+    <div class="flex items-center">
+        <div class="flex items-center">
+            <div
+                class="flex justify-center items-center h-10 w-10 rounded-full bg-primary-grey_1 mr-2"
+            >
+                <span class="text-white">A</span>
+            </div>
+            <span class="text-primary-grey_1">Admin1_resto</span>
+        </div>
+
+        <div class="self-center items-center ml-10">
+            <mat-icon class="text-4xl cursor-pointer text-primary-grey_1"
+                >notifications</mat-icon
+            >
+        </div>
+    </div>
+
+    <!-- <div class="self-center items-center ml-10 cursor-pointer" (click)="menuTrigger.openMenu()" >
+        <span class="h-12 w-12 bg-neutral-400 border rounded-3xl overflow-hidden inline-block" #menuTrigger="matMenuTrigger" [matMenuTriggerFor]="menu">
+            <img src="{{loggedInUser.avatar.url}}" alt="" class="rounded-full">
+        </span>
+    </div> -->
+</div>

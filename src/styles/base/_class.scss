@@ -1,0 +1,37 @@
+@import 'typography';
+
+.heading-1{
+    @include heading-1;
+}
+
+.heading-2{
+    @include heading-2;
+}
+
+.heading-3{
+    @include heading-3;
+}
+
+.heading-4{
+    @include heading-4;
+}
+
+.heading-5{
+    @include heading-5;
+}
+
+.subtitle-large{
+    @include subtitle-large;
+}
+
+.subtitle-small{
+    @include subtitle-small;
+}
+
+.subtitle-tiny{
+    @include subtitle-tiny;
+}
+
+.body{
+    @include body;
+}
